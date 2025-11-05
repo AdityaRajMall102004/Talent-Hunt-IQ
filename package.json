@@ -11,6 +11,7 @@
     "start": "cd backend && npm start"
   },
   "dependencies": {
+    "@stream-io/node-sdk": "^0.7.17",
     "mongodb": "^6.20.0"
   }
 }
