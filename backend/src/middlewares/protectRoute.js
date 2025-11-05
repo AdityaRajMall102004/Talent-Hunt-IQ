@@ -6,12 +6,12 @@ export const protectRoute=[
         try{
             const clerkId=req.auth().userId;
             if(!clerkId){
-                return res.status(401).json({msg:"Unauthorized"});
+                return res.status(401).json({message:"Unauthorized"});
             }
             //find user in db
             const user=await User.findOne({clerkId});
             if(!user){
-                return  res.status(401).json({msg:"User not found"});
+                return  res.status(401).json({message:"User not found"});
             }
             //attach user to request object
             req.user=user;
@@ -19,7 +19,7 @@ export const protectRoute=[
         }
         catch(err){
             console.error('Error in protectRoute middleware:',err.message);
-            res.status(500).json({msg:"Server Error"});
+            res.status(500).json({message:"Server Error"});
         }
     }
 ]
