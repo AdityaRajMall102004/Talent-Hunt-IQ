@@ -18,6 +18,7 @@
     "inngest": "^3.44.3",
     "mongoose": "^8.19.1",
     "nodemon": "^3.1.10",
-    "@stream-io/node-sdk": "^0.7.17"
+    "@stream-io/node-sdk": "^0.7.17",
+    "stream-chat": "^9.25.0"
   }
 }
