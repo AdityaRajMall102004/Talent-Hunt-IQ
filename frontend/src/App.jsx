@@ -6,7 +6,7 @@ function App() {
      <header>
       <h1>Welcome to TalentHunt</h1>
       <SignedOut>
-        <SignInButton mode="modal"/>
+        <SignInButton mode='modal' />
       </SignedOut>
       <SignedIn>
         <UserButton />
