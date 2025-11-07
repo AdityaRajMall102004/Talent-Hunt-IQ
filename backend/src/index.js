@@ -6,10 +6,10 @@ import {serve} from 'inngest/express';
 import {inngest,functions} from './lib/inngest.js';
 import connectDB from './lib/db.js';
 import {clerkMiddleware} from '@clerk/express';
-import { protectRoute } from './middlewares/protectRoute.js';
+import sessionRoutes from './routes/sessionRoute.js';
 import chatRoutes from './routes/chatRoutes.js';
 const port=process.env.PORT||5000;
-dotenv.config();
+dotenv.config({quiet: true} );
 const app=express();
 const __dirname=path.resolve();
 console.log(port);
@@ -21,11 +21,10 @@ app.use(express.json());
 app.use(cors({origin:process.env.CLIENT_URL,credentials:true}));
 app.use(clerkMiddleware());//this will add auth feild to request object:req.auth()
 app.use('/api/inngest',serve({client:inngest,functions}));
-app.use('/api/chat',chatRoutes) 
-//when you pass array of middlewares,it will execute in order sequentially one by one
-app.get('/video-calls',protectRoute,(req,res)=>{
-    res.send('This is  protected route');
-});
+app.use('/api/chat',chatRoutes);
+app.use('/api/sessions',sessionRoutes);
+
+
 console.log(process.env.NODE_ENV); 
 if(process.env.NODE_ENV==='production'){
     app.use(express.static(path.join(__dirname,'../frontend/dist')));
