@@ -9,7 +9,6 @@ import StatsCards from "../components/StatsCards";
 import ActiveSessions from "../components/ActiveSessions";
 import RecentSessions from "../components/RecentSessions";
 import CreateSessionModal from "../components/CreateSessionModal";
-
 function DashboardPage() {
   const navigate = useNavigate();
   const { user } = useUser();

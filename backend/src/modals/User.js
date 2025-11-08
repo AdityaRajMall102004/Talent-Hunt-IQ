@@ -4,14 +4,11 @@ const userSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
-    trim: true,
   },
   email: {
     type: String,
     required: true,
     unique: true,
-    trim: true,
   },
   profileImage: {
     type: String,
@@ -22,7 +19,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true,
   }, 
-},{timestamps: true}//createdAt and updatedAt fields will be added automatically
+},{timestamps: true}
 );
 
 const User = mongoose.model('User', userSchema);

@@ -1,21 +1,3 @@
-// import React from 'react'
-// import { toast } from 'react-hot-toast';
-// import {SignedIn, SignedOut,SignInButton, SignOutButton, UserButton} from "@clerk/clerk-react";
-// function HomePage() {
-//   return (
-//     <div>
-//       <h1>Welcome to TalentHunt</h1>
-//       <button className='btn btn-secondary' onClick={()=>toast.success("This is a success toast")}>Click me</button>
-//       <SignedOut>
-//         <SignInButton mode="modal"/>
-//       </SignedOut>
-//       <SignedIn>
-//         <UserButton />
-//       </SignedIn>
-//     </div>
-//   )
-// }
-// export default HomePage;
 import { Link } from "react-router";
 import {
   ArrowRightIcon,
@@ -118,11 +100,11 @@ function HomePage() {
             {/* STATS */}
             <div className="stats stats-vertical lg:stats-horizontal bg-base-100 shadow-lg">
               <div className="stat">
-                <div className="stat-value text-primary">10K+</div>
+                <div className="stat-value text-primary">10+</div>
                 <div className="stat-title">Active Users</div>
               </div>
               <div className="stat">
-                <div className="stat-value text-secondary">50K+</div>
+                <div className="stat-value text-secondary">20+</div>
                 <div className="stat-title">Sessions</div>
               </div>
               <div className="stat">
