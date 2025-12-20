@@ -1,0 +1,83 @@
+🎯 Introducing InterviewMate 🚀
+
+Your All-in-One Platform for Real-Time Technical Interviews 💻
+
+Tired of juggling between Zoom, Google Docs, and coding platforms during interviews?
+
+ InterviewMate brings everything together — live video calls, real-time coding, automated feedback, and collaboration — all in a single professional interface.
+
+🌟 Why InterviewMate?
+
+1️⃣ Real-Time Interviews — Conduct or attend live coding sessions with a VSCode-like editor.
+
+ 2️⃣ Video + Chat Integration — Talk, share, and code — all on one screen.
+
+ 3️⃣ Automated Evaluation — Instantly get feedback based on pre-set test cases.
+
+ 4️⃣ Practice Mode — Sharpen your skills with built-in DSA problems anytime.
+
+ 5️⃣ Secure Collaboration — Private rooms with 2-person access and end-to-end control.
+
+🔹 Key Features
+
+💻 VSCode-Powered Code Editor — Write and execute code securely in the browser.
+
+ 🎥 1-on-1 Video Rooms — Toggle mic, camera, share screen, and even record sessions.
+
+ 💬 Real-Time Chat Messaging — Stay in sync with your interviewer or partner.
+
+ ⚙️ Safe Code Execution — Sandbox environment ensures fair and isolated runs.
+
+ 🎯 Auto Feedback System — Pass/fail feedback based on real test cases.
+
+ 🎉 Confetti & Notifications — Celebrate your success instantly!
+
+ 🧠 Async Background Jobs (Inngest) — Smooth handling of tasks like test evaluation and alerts.
+
+ 📊 Dashboard with Live Stats — Track coding attempts, success rate, and interview logs.
+
+ 🔒 Room Locking System — Keeps interviews private and distraction-free.
+
+💻 Tech Stack
+
+🧩 MERN Stack — MongoDB 🗄️ | Express.js ⚡ | React.js ⚛️ | Node.js 🌐
+
+ 🔐 Clerk — Authentication & secure user sessions
+
+ 🎥 Stream API — Video, chat & screen sharing
+
+ 🧠 Inngest — Background jobs & async workflows
+
+ ⚡ TanStack Query — Fast and cached data fetching
+
+ 🤖 CodeRabbit — Automated PR analysis and optimization
+
+ 🚀 Deployed on Sevalla — Free-tier friendly hosting solution
+
+📌 Project Info
+
+Frontend: React + Vite + Tailwind + TanStack Query
+
+ Backend: Node.js + Express + MongoDB + Inngest
+
+🧠 Designed to make technical interviews interactive, efficient, and realistic — both for interviewers and candidates.
+
+🆓 Demo Access:
+
+💻 Try it out locally:
+
+ Backend → npm run dev
+
+ Frontend → npm run dev
+
+With InterviewMate, coding interviews feel just like working in a real development environment — simple, fast, and collaborative.
+
+No more switching tabs. No more setup hassles.
+
+ Just pure interview experience — redefined. 💬💻
+
+🔗 GitHub Repository: https://lnkd.in/geejYdS5
+
+🔗 Project Link : https://lnkd.in/gQyyyhyd
+
+ #InterviewMate #FullStackDevelopment #React #NodeJS #MERN #WebDevelopment #SoftwareEngineering #CodingInterviews #Innovation #TechForGood
