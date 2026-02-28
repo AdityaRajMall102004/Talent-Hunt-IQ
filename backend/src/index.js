@@ -12,7 +12,7 @@ const port=process.env.PORT||5000;
 dotenv.config({quiet:true});
 const app = express();
 const __dirname = path.resolve();//Needed for serving frontend build files
-
+console.log("Updated version");
 // middleware
 app.use(express.json());//Allows server to read JSON data from requests.
 // credentials:true meaning?? => server allows a browser to include cookies on request
