@@ -1,6 +1,5 @@
-
 //tw ,daisyui,react-router,react-hot-toast,
- // react-query aka tanstack query,axios
+// react-query aka tanstack query,axios
 
 import { Suspense, lazy } from "react";
 import { useUser } from "@clerk/clerk-react";

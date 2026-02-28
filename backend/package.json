@@ -5,20 +5,23 @@
   "license": "ISC",
   "author": "Aditya Raj Mall",
   "type": "module",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "nodemon src/index.js"
+    "dev": "nodemon index.js",
+    "start": "node src/index.js"
   },
   "dependencies": {
     "@clerk/express": "^1.7.43",
+    "@monaco-editor/react": "^4.7.0",
     "@stream-io/node-sdk": "^0.7.12",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "inngest": "^3.44.3",
     "mongoose": "^8.19.1",
-    "nodemon": "^3.1.10",
     "stream-chat": "^9.25.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

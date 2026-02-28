@@ -1,5 +1,4 @@
-// Piston API is a service for code execution
-const PISTON_API = import.meta.env.VITE_PISTON_API;
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 const LANGUAGE_VERSIONS = {
   javascript: { language: "javascript", version: "18.15.0" },
   python: { language: "python", version: "3.10.0" },
@@ -8,11 +7,21 @@ const LANGUAGE_VERSIONS = {
 };
 
 /**
- * Executes code using the Piston API.
- * @param {string} language - programming language (javascript | python | java | cpp)
- * @param {string} code - source code to execute
+ * @param {string} language - programming language
+ * @param {string} code - source code to executed
  * @returns {Promise<{success:boolean, output?:string, error?: string}>}
  */
+function getFileExtension(language) {
+  const extensions = {
+    javascript: "js",
+    python: "py",
+    java: "java",
+    cpp: "cpp",
+  };
+
+  return extensions[language] || "txt";
+}
+
 export async function executeCode(language, code) {
   try {
     const languageConfig = LANGUAGE_VERSIONS[language];
@@ -24,7 +33,7 @@ export async function executeCode(language, code) {
       };
     }
 
-    const response = await fetch(`${PISTON_API}/execute`, {
+    const response = await fetch(`${API_BASE}/compile`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,8 +59,15 @@ export async function executeCode(language, code) {
 
     const data = await response.json();
 
-    const output = data.run?.output?.trim() || "";
-    const stderr = data.run?.stderr?.trim() || "";
+    if (!data || !data.run) {
+      return {
+        success: false,
+        error: data?.error || "Invalid compiler response",
+      };
+    }
+
+    const output = data.run.output || "";
+    const stderr = data.run.stderr || "";
 
     if (stderr) {
       return {
@@ -71,15 +87,4 @@ export async function executeCode(language, code) {
       error: `Failed to execute code: ${error.message}`,
     };
   }
-}
-
-function getFileExtension(language) {
-  const extensions = {
-    javascript: "js",
-    python: "py",
-    java: "java",
-    cpp: "cpp",
-  };
-
-  return extensions[language] || "txt";
 }
